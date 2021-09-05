@@ -1,0 +1,75 @@
+.page-title {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    padding: 5px 0 10px 0;
+    background-image: linear-gradient(to right, rgb(84, 65, 255) , rgb(0, 0, 77));
+}
+
+.search-area {
+    flex-wrap: wrap;
+    display: inline-block;
+}
+
+.search-area h2 {
+    font-weight: bold;
+    margin: 5px;
+}
+
+.search-area input {
+    margin: 5px;
+    padding: 7px 50px 7px 50px;
+    border-radius: 5px;
+}
+
+.search-area button {
+    margin: 5px;
+    color: whitesmoke;
+    background-color: rgb(96, 205, 255);
+    padding: 4px 117px 4px 117px;
+    border-radius: 5px;
+    border: none;
+}
+
+.search-area button:hover {
+    color: white;
+    background-color: rgb(124, 213, 255);
+}
+
+.searched-places {
+    display: inline-block;
+    flex-wrap: wrap;
+    background-image: linear-gradient(to bottom right, rgb(84, 65, 255) , rgb(0, 0, 77));
+    min-height: 500px;
+    min-width: 275px;
+    margin: 10px 0 0 10px;
+}
+
+.response-container {
+    vertical-align: top;
+    position:relative;
+    top: -168px;
+    display: inline-block;
+    border: 1px dotted black;
+    min-height: 655px;
+    min-width: 1169px;
+    margin: 1.5%;
+}
+
+#current-weather {
+    border: solid black;
+    min-height: 250px;
+}
+
+#forecast {
+    margin-top: 25px;
+}
+
+.forecast-cards {
+    display: inline-block;
+    flex-direction: column;
+    min-height: 250px;
+    min-width: 200px;
+    background-color: rgb(58, 53, 121);
+    margin: 15px;
+}
