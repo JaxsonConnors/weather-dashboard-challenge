@@ -1,17 +1,18 @@
-//var searchTerm = document.querySelector('#searchTerm').value;
-
-function findCity() {
+function fetchCity(searchQuery) {
 
     var responseContainerEl = document.querySelector('#response-container');
+    responseContainerEl.style.visibility = 'visible';
 
     fetch(
-        'https://api.openweathermap.org/data/2.5/onecall?lat=40.5622&lon=-111.9297&exclude=hourly,daily&appid=075bfb0a221c22109566147d3393fe9b'
+        'https://api.openweathermap.org/data/2.5/weather?q=' + searchQuery + '&appid=075bfb0a221c22109566147d3393fe9b'
       )
         .then(function(response) {
             return response.json();
         })
         .then(function(data) {
             console.log(data);
+
+            /*
             var currentWeatherEl = document.createElement('div');
             var forecastEl = document.createElement('div');
             var forecastTitleEl = document.createElement('h4');
@@ -42,5 +43,33 @@ function findCity() {
             forecastEl.appendChild(day3);
             forecastEl.appendChild(day4);
             forecastEl.appendChild(day5);
+            */
     });
+};
+
+function findRecentCity(cityName) {
+    fetchCity(cityName);
+};
+
+function findCity() {
+
+    var searchQuery = document.querySelector('#search-query').value;
+
+    fetchCity(searchQuery);
+
+    searchedCities(searchQuery);
+};
+
+function searchedCities(searchQuery) {
+
+    var searchedPlaces = document.querySelector('.searched-places');
+
+    var cityName = document.createElement('button');
+    cityName.setAttribute('class', 'city-name');
+
+    cityName.innerHTML = searchQuery;
+
+    cityName.setAttribute('onclick', 'findRecentCity("' + cityName.innerHTML + '")');
+
+    searchedPlaces.appendChild(cityName);
 };

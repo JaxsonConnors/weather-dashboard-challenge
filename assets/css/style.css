@@ -39,21 +39,33 @@
 .searched-places {
     display: inline-block;
     flex-wrap: wrap;
-    background-image: linear-gradient(to bottom right, rgb(84, 65, 255) , rgb(0, 0, 77));
-    min-height: 500px;
+    height: 500px;
     min-width: 275px;
+    max-width: 275px;
     margin: 10px 0 0 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .response-container {
     vertical-align: top;
-    position:relative;
+    position: relative;
     top: -168px;
     display: inline-block;
-    border: 1px dotted black;
     min-height: 655px;
     min-width: 1169px;
     margin: 1.5%;
+    visibility: hidden;
+}
+
+.city-name {
+    margin: 5px;
+    color: rgb(17, 13, 13);
+    background-color: rgb(203, 221, 230);
+    padding: 4px 105px 4px 105px;
+    border-radius: 5px;
+    border: none;
+    width: 265px;
 }
 
 #current-weather {

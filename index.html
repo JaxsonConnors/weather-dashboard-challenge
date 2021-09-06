@@ -21,24 +21,36 @@
     </header>
 
 <div>
+
     <div class="search-area">
         <h2>Search for a City:</h2>
-        <input type="search">
+        <input type="search" id="search-query">
         <br>
         <button onclick="findCity()">Search</button>
     </div>
+    
     <br>
+
     <div class="searched-places">
 
     </div>
+
     <section class="response-container" id="response-container">
-        <!--
-        <div class="current-weather"></div>
-        <div class="5-day-forecast"></div>
-        -->
+
+        <div class="current-weather" id="current-weather"></div>
+        <div class="5-day-forecast" id="forecast">
+            <h4>5-Day forecast</h4>
+            <div class="forecast-cards"></div>
+            <div class="forecast-cards"></div>
+            <div class="forecast-cards"></div>
+            <div class="forecast-cards"></div>
+            <div class="forecast-cards"></div>
+        </div>
+
     </section>
+
 </div>
- 
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./assets/js/script.js"></script>
