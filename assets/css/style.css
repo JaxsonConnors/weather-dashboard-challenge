@@ -1,3 +1,7 @@
+p {
+    white-space: pre-wrap;
+}
+
 .page-title {
     text-align: center;
     color: white;
@@ -78,10 +82,15 @@
 }
 
 .forecast-cards {
+    color: white;
     display: inline-block;
     flex-direction: column;
     min-height: 250px;
     min-width: 200px;
     background-color: rgb(58, 53, 121);
     margin: 15px;
+}
+
+.forecast-cards h3 {
+    text-align: center;
 }
